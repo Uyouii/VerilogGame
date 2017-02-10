@@ -1,0 +1,8 @@
+verilog work "ipcore_dir/trees2.v"
+verilog work "ipcore_dir/trees1.v"
+verilog work "ipcore_dir/ground.v"
+verilog work "ipcore_dir/game_over.v"
+verilog work "ipcore_dir/Demon2.v"
+verilog work "ipcore_dir/Demon1.v"
+verilog work "ipcore_dir/clouds.v"
+verilog work "draw_demon1.v"

@@ -1,0 +1,519 @@
+Release 14.7 Map P.20131013 (nt)
+Xilinx Mapping Report File for Design 'TOP'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc3s200-ft256-5 -cm area -ir off -pr off
+-c 100 -o TOP_map.ncd TOP.ngd TOP.pcf 
+Target Device  : xc3s200
+Target Package : ft256
+Target Speed   : -5
+Mapper Version : spartan3 -- $Revision: 1.55 $
+Mapped Date    : Mon Jan 11 14:10:59 2016
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    6
+Logic Utilization:
+  Total Number Slice Registers:         470 out of   3,840   12%
+    Number used as Flip Flops:          393
+    Number used as Latches:              77
+  Number of 4 input LUTs:             1,463 out of   3,840   38%
+Logic Distribution:
+  Number of occupied Slices:          1,045 out of   1,920   54%
+    Number of Slices containing only related logic:   1,045 out of   1,045 100%
+    Number of Slices containing unrelated logic:          0 out of   1,045   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:       1,980 out of   3,840   51%
+    Number used as logic:             1,463
+    Number used as a route-thru:        517
+
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+  Number of bonded IOBs:                 10 out of     173    5%
+  Number of RAMB16s:                     12 out of      12  100%
+  Number of MULT18X18s:                   8 out of      12   66%
+  Number of BUFGMUXs:                     6 out of       8   75%
+
+Average Fanout of Non-Clock Nets:                2.79
+
+Peak Memory Usage:  210 MB
+Total REAL time to MAP completion:  4 secs 
+Total CPU time to MAP completion:   4 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:PhysDesignRules:372 - Gated clock. Clock net U2/show_over_and0000 is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net U2/show_cloud_and0001 is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net U2/show_tree2_and0000 is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net U2/show_tree1_and0000 is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net U2/addr_and0000 is sourced
+   by a combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net U2/high_ground1_and0000 is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:243 - Logical network btn<2> has no load.
+INFO:LIT:395 - The above info message is repeated 22 more times for the
+   following (max. 5 shown):
+   SW<7>,
+   SW<6>,
+   SW<5>,
+   SW<4>,
+   SW<3>
+   To see the details of these info messages, please use the -detail switch.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+  34 block(s) removed
+  16 block(s) optimized away
+  78 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+The signal "U2/Rom10/N0" is sourceless and has been removed.
+The signal "U2/Rom5/douta<15>" is sourceless and has been removed.
+The signal "U2/Rom5/douta<14>" is sourceless and has been removed.
+The signal "U2/Rom5/douta<13>" is sourceless and has been removed.
+The signal "U2/Rom5/douta<12>" is sourceless and has been removed.
+The signal "U2/Rom5/douta<11>" is sourceless and has been removed.
+The signal "U2/Rom5/douta<10>" is sourceless and has been removed.
+The signal "U2/Rom5/douta<9>" is sourceless and has been removed.
+The signal "U2/Rom5/douta<8>" is sourceless and has been removed.
+The signal "U2/Rom5/douta<7>" is sourceless and has been removed.
+The signal "U2/Rom5/douta<6>" is sourceless and has been removed.
+The signal "U2/Rom5/douta<5>" is sourceless and has been removed.
+The signal "U2/Rom5/douta<4>" is sourceless and has been removed.
+The signal "U2/Rom5/douta<3>" is sourceless and has been removed.
+The signal "U2/Rom5/douta<2>" is sourceless and has been removed.
+The signal "U2/Rom5/douta<1>" is sourceless and has been removed.
+The signal "U2/Rom5/N0" is sourceless and has been removed.
+The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramlo
+op[2].ram.ram_douta<2>" is sourceless and has been removed.
+ Sourceless block
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_m
+ux_a.A/Mmux_dout_mux91" (ROM) removed.
+  The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_m
+ux_a.A/Mmux_dout_mux9" is sourceless and has been removed.
+   Sourceless block
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_m
+ux_a.A/Mmux_dout_mux9_f5" (MUX) removed.
+The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramlo
+op[1].ram.ram_douta<2>" is sourceless and has been removed.
+The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramlo
+op[0].ram.ram_douta<2>" is sourceless and has been removed.
+The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramlo
+op[2].ram.ram_douta<1>" is sourceless and has been removed.
+ Sourceless block
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_m
+ux_a.A/Mmux_dout_mux81" (ROM) removed.
+  The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_m
+ux_a.A/Mmux_dout_mux8" is sourceless and has been removed.
+   Sourceless block
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_m
+ux_a.A/Mmux_dout_mux8_f5" (MUX) removed.
+The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramlo
+op[1].ram.ram_douta<1>" is sourceless and has been removed.
+The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramlo
+op[0].ram.ram_douta<1>" is sourceless and has been removed.
+The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramlo
+op[2].ram.ram_douta<15>" is sourceless and has been removed.
+ Sourceless block
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_m
+ux_a.A/Mmux_dout_mux71" (ROM) removed.
+  The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_m
+ux_a.A/Mmux_dout_mux7" is sourceless and has been removed.
+   Sourceless block
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_m
+ux_a.A/Mmux_dout_mux7_f5" (MUX) removed.
+The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramlo
+op[5].ram.ram_douta<7>" is sourceless and has been removed.
+The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramlo
+op[6].ram.ram_douta<3>" is sourceless and has been removed.
+The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramlo
+op[2].ram.ram_douta<14>" is sourceless and has been removed.
+ Sourceless block
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_m
+ux_a.A/Mmux_dout_mux61" (ROM) removed.
+  The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_m
+ux_a.A/Mmux_dout_mux6" is sourceless and has been removed.
+   Sourceless block
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_m
+ux_a.A/Mmux_dout_mux6_f5" (MUX) removed.
+The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramlo
+op[5].ram.ram_douta<6>" is sourceless and has been removed.
+The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramlo
+op[6].ram.ram_douta<2>" is sourceless and has been removed.
+The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramlo
+op[2].ram.ram_douta<13>" is sourceless and has been removed.
+ Sourceless block
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_m
+ux_a.A/Mmux_dout_mux51" (ROM) removed.
+  The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_m
+ux_a.A/Mmux_dout_mux5" is sourceless and has been removed.
+   Sourceless block
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_m
+ux_a.A/Mmux_dout_mux5_f5" (MUX) removed.
+The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramlo
+op[5].ram.ram_douta<5>" is sourceless and has been removed.
+The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramlo
+op[6].ram.ram_douta<1>" is sourceless and has been removed.
+The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramlo
+op[2].ram.ram_douta<12>" is sourceless and has been removed.
+ Sourceless block
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_m
+ux_a.A/Mmux_dout_mux41" (ROM) removed.
+  The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_m
+ux_a.A/Mmux_dout_mux4" is sourceless and has been removed.
+   Sourceless block
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_m
+ux_a.A/Mmux_dout_mux4_f5" (MUX) removed.
+The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramlo
+op[5].ram.ram_douta<4>" is sourceless and has been removed.
+The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramlo
+op[6].ram.ram_douta<0>" is sourceless and has been removed.
+The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramlo
+op[2].ram.ram_douta<11>" is sourceless and has been removed.
+ Sourceless block
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_m
+ux_a.A/Mmux_dout_mux31" (ROM) removed.
+  The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_m
+ux_a.A/Mmux_dout_mux3" is sourceless and has been removed.
+   Sourceless block
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_m
+ux_a.A/Mmux_dout_mux3_f5" (MUX) removed.
+The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramlo
+op[5].ram.ram_douta<3>" is sourceless and has been removed.
+The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramlo
+op[4].ram.ram_douta<3>" is sourceless and has been removed.
+The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramlo
+op[2].ram.ram_douta<10>" is sourceless and has been removed.
+ Sourceless block
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_m
+ux_a.A/Mmux_dout_mux21" (ROM) removed.
+  The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_m
+ux_a.A/Mmux_dout_mux2" is sourceless and has been removed.
+   Sourceless block
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_m
+ux_a.A/Mmux_dout_mux2_f5" (MUX) removed.
+The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramlo
+op[5].ram.ram_douta<2>" is sourceless and has been removed.
+The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramlo
+op[4].ram.ram_douta<2>" is sourceless and has been removed.
+The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramlo
+op[2].ram.ram_douta<9>" is sourceless and has been removed.
+ Sourceless block
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_m
+ux_a.A/Mmux_dout_mux161" (ROM) removed.
+  The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_m
+ux_a.A/Mmux_dout_mux16" is sourceless and has been removed.
+   Sourceless block
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_m
+ux_a.A/Mmux_dout_mux16_f5" (MUX) removed.
+The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramlo
+op[5].ram.ram_douta<1>" is sourceless and has been removed.
+The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramlo
+op[4].ram.ram_douta<1>" is sourceless and has been removed.
+The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramlo
+op[2].ram.ram_douta<8>" is sourceless and has been removed.
+ Sourceless block
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_m
+ux_a.A/Mmux_dout_mux151" (ROM) removed.
+  The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_m
+ux_a.A/Mmux_dout_mux15" is sourceless and has been removed.
+   Sourceless block
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_m
+ux_a.A/Mmux_dout_mux15_f5" (MUX) removed.
+The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramlo
+op[5].ram.ram_douta<0>" is sourceless and has been removed.
+The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramlo
+op[4].ram.ram_douta<0>" is sourceless and has been removed.
+The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramlo
+op[2].ram.ram_douta<7>" is sourceless and has been removed.
+ Sourceless block
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_m
+ux_a.A/Mmux_dout_mux141" (ROM) removed.
+  The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_m
+ux_a.A/Mmux_dout_mux14" is sourceless and has been removed.
+   Sourceless block
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_m
+ux_a.A/Mmux_dout_mux14_f5" (MUX) removed.
+The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramlo
+op[1].ram.ram_douta<7>" is sourceless and has been removed.
+The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramlo
+op[3].ram.ram_douta<3>" is sourceless and has been removed.
+The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramlo
+op[2].ram.ram_douta<6>" is sourceless and has been removed.
+ Sourceless block
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_m
+ux_a.A/Mmux_dout_mux131" (ROM) removed.
+  The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_m
+ux_a.A/Mmux_dout_mux13" is sourceless and has been removed.
+   Sourceless block
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_m
+ux_a.A/Mmux_dout_mux13_f5" (MUX) removed.
+The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramlo
+op[1].ram.ram_douta<6>" is sourceless and has been removed.
+The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramlo
+op[3].ram.ram_douta<2>" is sourceless and has been removed.
+The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramlo
+op[2].ram.ram_douta<5>" is sourceless and has been removed.
+ Sourceless block
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_m
+ux_a.A/Mmux_dout_mux121" (ROM) removed.
+  The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_m
+ux_a.A/Mmux_dout_mux12" is sourceless and has been removed.
+   Sourceless block
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_m
+ux_a.A/Mmux_dout_mux12_f5" (MUX) removed.
+The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramlo
+op[1].ram.ram_douta<5>" is sourceless and has been removed.
+The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramlo
+op[3].ram.ram_douta<1>" is sourceless and has been removed.
+The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramlo
+op[2].ram.ram_douta<4>" is sourceless and has been removed.
+ Sourceless block
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_m
+ux_a.A/Mmux_dout_mux111" (ROM) removed.
+  The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_m
+ux_a.A/Mmux_dout_mux11" is sourceless and has been removed.
+   Sourceless block
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_m
+ux_a.A/Mmux_dout_mux11_f5" (MUX) removed.
+The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramlo
+op[1].ram.ram_douta<4>" is sourceless and has been removed.
+The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramlo
+op[3].ram.ram_douta<0>" is sourceless and has been removed.
+The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramlo
+op[2].ram.ram_douta<3>" is sourceless and has been removed.
+ Sourceless block
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_m
+ux_a.A/Mmux_dout_mux101" (ROM) removed.
+  The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_m
+ux_a.A/Mmux_dout_mux10" is sourceless and has been removed.
+   Sourceless block
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_m
+ux_a.A/Mmux_dout_mux10_f5" (MUX) removed.
+The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramlo
+op[1].ram.ram_douta<3>" is sourceless and has been removed.
+The signal
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramlo
+op[0].ram.ram_douta<3>" is sourceless and has been removed.
+The signal "U2/Rom3/N0" is sourceless and has been removed.
+Unused block
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramlo
+op[3].ram.r/s3_init.ram/dpram.dp4x4.ram" (RAMB16_S4_S4) removed.
+Unused block
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramlo
+op[4].ram.r/s3_init.ram/dpram.dp4x4.ram" (RAMB16_S4_S4) removed.
+Unused block
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramlo
+op[5].ram.r/s3_init.ram/dpram.dp9x9.ram" (RAMB16_S9_S9) removed.
+Unused block
+"U2/Rom5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramlo
+op[6].ram.r/s3_init.ram/dpram.dp4x4.ram" (RAMB16_S4_S4) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		U2/Rom1/XST_GND
+VCC 		U2/Rom1/XST_VCC
+GND 		U2/Rom10/XST_GND
+VCC 		U2/Rom10/XST_VCC
+GND 		U2/Rom2/XST_GND
+VCC 		U2/Rom2/XST_VCC
+GND 		U2/Rom3/XST_GND
+VCC 		U2/Rom3/XST_VCC
+GND 		U2/Rom5/XST_GND
+VCC 		U2/Rom5/XST_VCC
+GND 		U2/Rom6/XST_GND
+VCC 		U2/Rom6/XST_VCC
+GND 		U2/Rom9/XST_GND
+VCC 		U2/Rom9/XST_VCC
+GND 		XST_GND
+VCC 		XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| HS                                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| SW<0>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| VS                                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| blue                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| btn<0>                             | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| btn<1>                             | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| btn<3>                             | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| clk                                | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| green                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| red                                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+This design was not run using timing mode.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+No control set information for this architecture.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.

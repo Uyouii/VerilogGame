@@ -1,0 +1,51 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to E:/Demon_/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.53 secs
+ 
+--> Parameter xsthdpdir set to E:/Demon_/xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.53 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "ipcore_dir/trees2.v" in library work
+Compiling verilog file "ipcore_dir/trees1.v" in library work
+Module <trees2> compiled
+Compiling verilog file "ipcore_dir/ground.v" in library work
+Module <trees1> compiled
+Compiling verilog file "ipcore_dir/game_over.v" in library work
+Module <ground> compiled
+Compiling verilog file "ipcore_dir/Demon2.v" in library work
+Module <game_over> compiled
+Compiling verilog file "ipcore_dir/Demon1.v" in library work
+Module <Demon2> compiled
+Compiling verilog file "ipcore_dir/clouds.v" in library work
+Module <Demon1> compiled
+Compiling verilog file "draw_demon1.v" in library work
+Module <clouds> compiled
+Module <draw_demon1> compiled
+No errors in compilation
+Analysis of file <"draw_demon1.prj"> succeeded.
+ 
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 1.30 secs
+ 
+--> 
+
+Total memory usage is 256992 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

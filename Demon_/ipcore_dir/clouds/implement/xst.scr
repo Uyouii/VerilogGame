@@ -1,0 +1,13 @@
+run
+-ifmt VHDL
+-ent clouds_exdes
+-p xc3s200-ft256-5
+-ifn xst.prj
+-write_timing_constraints No
+-iobuf YES
+-max_fanout 100
+-ofn clouds_exdes 
+-ofmt NGC
+-bus_delimiter ()
+-hierarchy_separator /
+-case Maintain

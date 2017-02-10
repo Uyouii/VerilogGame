@@ -1,0 +1,12 @@
+Net "clk"    loc = "T9";
+Net "btn[0]" loc = "L14";
+Net "red"    loc = "R12";
+Net "green"  loc = "T12";
+Net "blue"   loc = "R11";
+Net "HS"     loc = "R9";
+
+Net "VS"     loc = "T10";
+Net "btn[3]" loc = "M13";
+net "btn[1]" loc = "M14";
+
+Net "SW[0]"  loc = "K13";

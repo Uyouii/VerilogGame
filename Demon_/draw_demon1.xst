@@ -1,0 +1,5 @@
+set -tmpdir "E:/Demon_/xst/projnav.tmp"
+set -xsthdpdir "E:/Demon_/xst"
+elaborate
+-ifn draw_demon1.prj
+-ifmt mixed

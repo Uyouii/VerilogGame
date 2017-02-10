@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\Demon_\TOP.ncd
+OUTFILE=D:\Demon_\TOP.bit
+FAMILY=Spartan3
+PART=xc3s200-5ft256
+WORKINGDIR=D:\Demon_
+LICENSE=WebPack
+USER_INFO=__0_0_0
